@@ -1,0 +1,30 @@
+{
+    "name": "freelancer-expense-management",
+    "version": "1.0.0",
+    "description": "Backend for managing freelancer expenses",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "dev": "node server.js",
+        "start": "react-scripts start",
+        "test": "react-scripts test",
+        "build": "react-scripts build"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "firebase-admin": "^11.10.0",
+        "mongoose": "^7.0.0",
+        "morgan": "^1.10.0",
+        "react-scripts": "^5.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "author": "Your Name",
+    "license": "MIT"
+}
