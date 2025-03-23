@@ -35,13 +35,29 @@ Freelancers juggle multiple challenges—unorganized finances, tricky invoicing,
 
 Here’s a glimpse of what we’ve built so far! (Screenshots coming soon after integration fixes.)
 
-### Dashboard
-![Dashboard Snippet](https://via.placeholder.com/500x300?text=Dashboard+Snippet)  
-*Track your income, expenses, and tax dues in one clean view.*
+### Login Page
+![Login Page](https://drive.google.com/uc?export=view&id=1FjkQmECfr3KChNL1ecXWi2ehqcK20zQ8)  
+*Simple and secure login interface for accessing your account.*
 
-### Invoice Creation
-![Invoice Snippet](https://via.placeholder.com/500x300?text=Invoice+Snippet)  
+### Dashboard
+![Dashboard](https://drive.google.com/uc?export=view&id=1MP32YHh8QDvei-_htkEiKk8r9qNdfIKu)  
+*Your central hub for managing finances, tracking income, expenses, and more.*
+
+### Tax Calculation
+![Tax Calculation](https://drive.google.com/uc?export=view&id=18SYzBrqOxCmXzHcv-IUCRWt3S5BILS_I)  
+*Estimate your taxes effortlessly with our built-in calculator.*
+
+### Invoice Generation
+![Invoice Generation](https://drive.google.com/uc?export=view&id=1zDF7mQPcOuE33TpGVJ6Z2qqh-npaNn1v)  
 *Generate sleek invoices with just a few clicks.*
+
+### Reports
+![Reports](https://drive.google.com/uc?export=view&id=1-6WLz6UHbvTYFm8sx_zNClKMWrr_XqkJ)  
+*Access detailed financial reports to monitor your progress.*
+
+### Settings
+![Settings](https://drive.google.com/uc?export=view&id=1gF-m8BXWN7UBGqFOmmi5Pnxfx5xHk6ti)  
+*Customize your account settings and preferences.*
 
 ---
 
