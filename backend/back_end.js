@@ -4,7 +4,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import router from './routes/income_routes.js';
+import router from './routes/user_routes.js';
+import income_routes from './routes/income_routes.js';
 dotenv.config();
 
 const app = express();
@@ -28,7 +29,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Routes
 app.use('/api/users', router);
-// app.use('/api/income', incomeRoutes);
+app.use('/api/income', income_routes);
 // app.use('/api/expense', expenseRoutes);
 // app.use('/api/invoice', invoiceRoutes);
 

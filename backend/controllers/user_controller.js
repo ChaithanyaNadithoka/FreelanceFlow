@@ -1,45 +1,32 @@
-import User from '../models/user_model.js'; // Ensure this file exists
+import User from '../models/user_model.js'; // Import the User model
 
-export const getUserProfile = async (req, res) => {
+// Controller function to create a user
+export const create_user = async (req, res) => {
     try {
-        const user = await User.findOne({ uid: req.user.uid });
+        console.log("hi"); // Debug message to check if function is called
 
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
+        const { full_name, email, tax_id } = req.body;
+
+        console.log("Preparing to create user:", full_name, email);
+
+        // Validate input
+        if (!full_name || !email) {
+            return res.status(400).json({ message: 'Full name and email are required' });
         }
 
-        res.json({
-            uid: user.uid,
-            email: user.email,
-            name: user.name || 'Anonymous',
-            phone: user.phone || 'Not provided',
-            address: user.address || 'Not provided',
-            registeredAt: user.registeredAt
-        });
+        // Create a new user
+        const newUser = new User({ full_name, email, tax_id });
+
+        console.log("Saving user to MongoDB...");
+
+        // Save user to MongoDB
+        await newUser.save();
+
+        console.log("User saved successfully!");
+
+        res.status(201).json({ message: 'User created successfully', user: newUser });
     } catch (error) {
-        res.status(500).json({ message: 'Error fetching user profile' });
-    }
-};
-
-export const updateUserProfile = async (req, res) => {
-    const { name, phone, address } = req.body;
-
-    try {
-        const user = await User.findOneAndUpdate(
-            { uid: req.user.uid },
-            { name, phone, address },
-            { new: true }
-        );
-
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-
-        res.json({
-            message: 'Profile updated successfully',
-            user
-        });
-    } catch (error) {
-        res.status(500).json({ message: 'Error updating profile' });
+        console.error("❌ Error creating user:", error);
+        res.status(500).json({ message: 'Server Error', error: error.message });
     }
 };

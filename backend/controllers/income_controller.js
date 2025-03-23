@@ -1,20 +1,17 @@
 import Income from '../models/income_model.js';
 
 export const addIncome = async (req, res) => {
-    const { name, amount, status, source } = req.body;
+    const { client_name, amount, status, date, user_id } = req.body;
 
     // Validate required fields
-    if (!name || !amount || !status || !source) {
-        return res.status(400).json({ message: 'All fields are required' });
-    }
 
     try {
         const income = new Income({
-            userId: req.user.uid,
-            name,
-            amount,
-            status,
-            source
+            client_name: client_name,
+            amount: amount,
+            status: status,
+            date: date,
+            user_id: user_id
         });
 
         await income.save();
